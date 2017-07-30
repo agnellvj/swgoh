@@ -13,12 +13,10 @@
 <%= for character <- @characters do %>
     <tr>
       <td><%= character.name %></td>
-      <td><%= character.data %></td>
+      <td><%= character.data |> Map.keys() %></td>
 
       <td class="text-right">
         <span><%= link "Show", to: character_path(@conn, :show, character), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Edit", to: character_path(@conn, :edit, character), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Delete", to: character_path(@conn, :delete, character), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
       </td>
     </tr>
 <% end %>

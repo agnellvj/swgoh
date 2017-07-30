@@ -7,8 +7,6 @@ defmodule App.Swgoh.Character do
   schema "characters" do
     field :data, :map
     field :name, :string
-
-    timestamps()
   end
 
   @doc false

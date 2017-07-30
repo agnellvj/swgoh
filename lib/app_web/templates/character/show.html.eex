@@ -9,7 +9,7 @@
 
   <li>
     <strong>Data:</strong>
-    <%= @character.data %>
+    <%= @character.data |> Map.keys() %>
   </li>
 
 </ul>

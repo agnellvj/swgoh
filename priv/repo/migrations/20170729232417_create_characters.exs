@@ -5,8 +5,6 @@ defmodule App.Repo.Migrations.CreateCharacters do
     create table(:characters) do
       add :name, :string
       add :data, :map
-
-      timestamps()
     end
 
   end
